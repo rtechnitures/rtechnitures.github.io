@@ -14,7 +14,7 @@
 	<meta property="og:type"          content="website" />
 	<meta property="og:title"         content="RTechnitures" />
 	<meta property="og:description"   content="The Furniture Shop For Techie People" />
-	<meta property="og:image"         content="https://rtechnitures.github.io/logo-square.png" />
+	<meta property="og:image"         content="https://rtechnitures.github.io/logo-fb-share.png" />
 
     <title>Heroic Features - Start Bootstrap Template</title>
 
@@ -225,7 +225,7 @@
 
             $(".menu").on('click', function () {
                 $('html, body').animate({
-                    scrollTop: $($(this).attr("href")).offset().top - 55
+                    scrollTop: ($(this).attr("href") == "#rtechnitures") ? 1000 : $($(this).attr("href")).offset().top - 55
                 }, 1000);
             });
 		});
