@@ -9,11 +9,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+	<meta property="fb:app_id" content="919947301442095"></meta>
 	<meta property="og:url"           content="https://rtechnitures.github.io" />
 	<meta property="og:type"          content="website" />
 	<meta property="og:title"         content="RTechnitures" />
 	<meta property="og:description"   content="The Furniture Shop For Techie People" />
-	<meta property="og:image"         content="https://rtechnitures.github.io/logo.png" />
+	<meta property="og:image"         content="https://rtechnitures.github.io/logo-square.png" />
 
     <title>Heroic Features - Start Bootstrap Template</title>
 
@@ -45,24 +46,24 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">RTechnitures</a>
+                <a class="navbar-brand" href="#rtechnitures">RTechnitures</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#standing-desk">Standing Desk</a>
+                        <a class="menu" href="#standing-desk">Standing Desk</a>
                     </li>
                     <li>
-                        <a href="#table-desk">Table Desk</a>
+                        <a class="menu" href="#table-desk">Table Desk</a>
                     </li>
 
 					<li>
-						<a href="#table-desk">Services</a>
+						<a class="menu" href="#table-desk">Services</a>
 					</li>
 
                     <li>
-                        <a href="#">Contact</a>
+                        <a class="menu" href="#">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -75,7 +76,7 @@
     <div class="container">
 
         <!-- Jumbotron Header -->
-        <header class="jumbotron hero-spacer">
+        <header class="jumbotron hero-spacer" id="rtechnitures">
             <h1>A Warm Welcome!</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
 
@@ -221,6 +222,12 @@
 
 		$(document).ready(function() {
 		   	$('#current_year').text(new Date().getFullYear());
+
+            $(".menu").on('click', function () {
+                $('html, body').animate({
+                    scrollTop: $($(this).attr("href")).offset().top - 55
+                }, 1000);
+            });
 		});
 	</script>
 </body>
